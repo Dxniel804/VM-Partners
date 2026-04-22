@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VM Partners — VendaMais</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Syne:wght@700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    VM<span class="dot">·</span>Partners
+  </div>
+  <a href="#qualificacao" class="nav-cta">Iniciar Candidatura</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-glow-left"></div>
+  <div class="hero-left">
+    <div class="hero-eyebrow">VM Partners · Canal de Expansão</div>
+    <h1>Transforme sua Influência Corporativa em um Canal <em>Estratégico</em> de Receita</h1>
+    <p class="hero-sub">
+      Una o seu relacionamento com decisores à inteligência comercial da <strong>VendaMais</strong> para gerar negócios de alto impacto.
+    </p>
+    <div class="hero-actions">
+      <a href="#qualificacao" class="btn-primary">Submeter minha Aplicação</a>
+      <button class="btn-ghost" onclick="document.getElementById('sobre').scrollIntoView({behavior:'smooth'})">Entender o modelo →</button>
+    </div>
+    <div class="hero-brand">
+      <span>Uma iniciativa da</span>
+      <img src="imgs/vendamais_logo.png" alt="VendaMais" class="hero-brand-logo">
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="video-frame">
+      <span class="corner tl"></span>
+      <span class="corner tr"></span>
+      <span class="corner bl"></span>
+      <span class="corner br"></span>
+      <div class="video-placeholder">
+        <div class="play-btn">
+          <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+        </div>
+        <span class="video-label">Vídeo — Marcelo Caetano</span>
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/FwMzijP2k04"
+          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;inset:0;"></iframe>
+        <p class="video-caption">
+          Entenda como a estrutura da VendaMais pode trabalhar ao lado do seu portfólio de relacionamentos para gerar resultados reais.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PARCEIROS — CARROSEL DE LOGOS -->
+  <!--
+    INSTRUÇÃO: Para adicionar logos reais, substitua cada bloco de SVG por:
+    <img src="img/nome-empresa.png" alt="Empresa" class="logo-img">
+    e adicione .logo-img { height: 28px; width: auto; } no CSS.
+  -->
+  <section class="partners-strip">
+  <div class="partners-label">Empresas Parceiras</div>
+  <div class="marquee-track">
+    <div class="marquee-inner" aria-hidden="true">
+
+      <!-- SET 1 -->
+      <div class="logo-item">
+        <svg class="logo-svg" viewBox="0 0 32 32" stroke="currentColor" fill="none" stroke-width="2">
+          <circle cx="16" cy="16" r="12"/>
+          <circle cx="16" cy="16" r="5"/>
+        </svg>
+        <span>Acumen</span>
+      </div>
+      <div class="logo-item">
+        <svg class="logo-svg" viewBox="0 0 32 32" stroke="currentColor" fill="none" stroke-width="2">
+          <polygon points="16,3 27,9.5 27,22.5 16,29 5,22.5 5,9.5"/>
+        </svg>
+        <span>Nexum</span>
+      </div>
+      <div class="logo-item">
+        <svg class="logo-svg" viewBox="0 0 32 32" stroke="currentColor" fill="none" stroke-width="2">
+          <path d="M16 3 L28 8 L28 17 C28 23 22 28 16 30 C10 28 4 23 4 17 L4 8 Z"/>
+        </svg>
+        <span>Fortis</span>
+      </div>
+      <div class="logo-item">
+        <svg class="logo-svg" viewBox="0 0 32 32" stroke="currentColor" fill="none" stroke-width="2">
+          <polygon points="16,4 28,28 4,28"/>
+        </svg>
+        <span>Valore</span>
+      </div>
+      <div class="logo-item">
+        <svg class="logo-svg" viewBox="0 0 32 32" stroke="currentColor" fill="none" stroke-width="2">
+          <rect x="9" y="9" width="14" height="14" transform="rotate(45 16 16)"/>
+        </svg>
+        <span>Apex</span>
+      </div>
+      <div class="logo-item">
+        <svg class="logo-svg" viewBox="0 0 32 32" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round">
+          <polyline points="4,24 10,14 16,19 22,8 28,12"/>
+        </svg>
+        <span>Stratego</span>
+      </div>
+      <div class="logo-item">
+        <svg class="logo-svg" viewBox="0 0 32 32" stroke="currentColor" fill="none" stroke-width="2">
+          <circle cx="16" cy="16" r="11"/>
+          <circle cx="16" cy="16" r="5"/>
+          <circle cx="16" cy="16" r="1.5" fill="currentColor" stroke="none"/>
+        </svg>
+        <span>Helix</span>
+      </div>
+      <div class="logo-item">
+        <svg class="logo-svg" viewBox="0 0 32 32" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round">
+          <path d="M4 16 Q10 7 16 16 Q22 25 28 16"/>
+          <polyline points="24,11 28,16 24,21"/>
+        </svg>
+        <span>Fluxo</span>
+      </div>
+      <div class="logo-item">
+        <svg class="logo-svg" viewBox="0 0 32 32" stroke="currentColor" fill="none" stroke-width="2">
+          <rect x="4" y="7" width="24" height="7"/>
+          <rect x="4" y="18" width="24" height="7"/>
+        </svg>
+        <span>Duplax</span>
+      </div>
+      <div class="logo-item">
+        <svg class="logo-svg" viewBox="0 0 32 32" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round">
+          <line x1="16" y1="4" x2="16" y2="28"/>
+          <line x1="4" y1="16" x2="28" y2="16"/>
+          <line x1="7.5" y1="7.5" x2="24.5" y2="24.5"/>
+          <line x1="24.5" y1="7.5" x2="7.5" y2="24.5"/>
+        </svg>
+        <span>Plenitude</span>
+      </div>
+
+      <!-- SET 2 — duplicado para loop contínuo -->
+      <div class="logo-item">
+        <svg class="logo-svg" viewBox="0 0 32 32" stroke="currentColor" fill="none" stroke-width="2">
+          <circle cx="16" cy="16" r="12"/>
+          <circle cx="16" cy="16" r="5"/>
+        </svg>
+        <span>Acumen</span>
+      </div>
+      <div class="logo-item">
+        <svg class="logo-svg" viewBox="0 0 32 32" stroke="currentColor" fill="none" stroke-width="2">
+          <polygon points="16,3 27,9.5 27,22.5 16,29 5,22.5 5,9.5"/>
+        </svg>
+        <span>Nexum</span>
+      </div>
+      <div class="logo-item">
+        <svg class="logo-svg" viewBox="0 0 32 32" stroke="currentColor" fill="none" stroke-width="2">
+          <path d="M16 3 L28 8 L28 17 C28 28 22 28 16 30 C10 28 4 23 4 17 L4 8 Z"/>
+        </svg>
+        <span>Fortis</span>
+      </div>
+      <div class="logo-item">
+        <svg class="logo-svg" viewBox="0 0 32 32" stroke="currentColor" fill="none" stroke-width="2">
+          <polygon points="16,4 28,28 4,28"/>
+        </svg>
+        <span>Valore</span>
+      </div>
+      <div class="logo-item">
+        <svg class="logo-svg" viewBox="0 0 32 32" stroke="currentColor" fill="none" stroke-width="2">
+          <rect x="9" y="9" width="14" height="14" transform="rotate(45 16 16)"/>
+        </svg>
+        <span>Apex</span>
+      </div>
+      <div class="logo-item">
+        <svg class="logo-svg" viewBox="0 0 32 32" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round">
+          <polyline points="4,24 10,14 16,19 22,8 28,12"/>
+        </svg>
+        <span>Stratego</span>
+      </div>
+      <div class="logo-item">
+        <svg class="logo-svg" viewBox="0 0 32 32" stroke="currentColor" fill="none" stroke-width="2">
+          <circle cx="16" cy="16" r="11"/>
+          <circle cx="16" cy="16" r="5"/>
+          <circle cx="16" cy="16" r="1.5" fill="currentColor" stroke="none"/>
+        </svg>
+        <span>Helix</span>
+      </div>
+      <div class="logo-item">
+        <svg class="logo-svg" viewBox="0 0 32 32" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round">
+          <path d="M4 16 Q10 7 16 16 Q22 25 28 16"/>
+          <polyline points="24,11 28,16 24,21"/>
+        </svg>
+        <span>Fluxo</span>
+      </div>
+      <div class="logo-item">
+        <svg class="logo-svg" viewBox="0 0 32 32" stroke="currentColor" fill="none" stroke-width="2">
+          <rect x="4" y="7" width="24" height="7"/>
+          <rect x="4" y="18" width="24" height="7"/>
+        </svg>
+        <span>Duplax</span>
+      </div>
+      <div class="logo-item">
+        <svg class="logo-svg" viewBox="0 0 32 32" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round">
+          <line x1="16" y1="4" x2="16" y2="28"/>
+          <line x1="4" y1="16" x2="28" y2="16"/>
+          <line x1="7.5" y1="7.5" x2="24.5" y2="24.5"/>
+          <line x1="24.5" y1="7.5" x2="7.5" y2="24.5"/>
+        </svg>
+        <span>Plenitude</span>
+      </div>
+
+    </div>
+  </div>
+  </section>
+
+</section>
+
+<!-- SOBRE — BLOCO 3 -->
+<section class="about" id="sobre">
+  <div class="container">
+    <div class="about-grid fade-in">
+      <div>
+        <div class="section-tag">O que é o VM Partners</div>
+        <h2>Um canal de expansão para quem já <span>tem trânsito</span> no mercado B2B</h2>
+        <p class="about-intro">
+          A <strong>VendaMais</strong> oficializa o <strong>VM Partners</strong>, um canal desenhado para quem já possui influência real no ambiente corporativo, mas busca um braço operacional de elite para converter oportunidades em resultados.
+        </p>
+        <p class="about-intro">
+          O modelo é fundamentado na divisão clara de papéis para maximizar a performance de ambos os lados.
+        </p>
+      </div>
+      <div class="roles">
+        <div class="role-card">
+          <div class="role-label">Seu Papel</div>
+          <div class="role-title">Relacionamento & Abertura de Portas</div>
+          <p class="role-desc">
+            Identificar empresas com desafios de crescimento, utilizar sua influência para abrir portas e iniciar conversas estratégicas com decisores C-Level.
+          </p>
+        </div>
+        <div class="role-card">
+          <div class="role-label">Papel da VendaMais</div>
+          <div class="role-title">Inteligência Operacional & Fechamento</div>
+          <p class="role-desc">
+            Aplicar 30 anos de experiência para assumir toda a inteligência e operação comercial — garantindo a condução técnica, o fechamento e a entrega final do projeto.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIFERENCIAIS — BLOCO 4 -->
+<section class="differentials" id="diferenciais">
+  <div class="container">
+    <div class="diff-header fade-in">
+      <div class="section-tag" style="justify-content:center;">Uma aliança diferente</div>
+      <h2>Focado em <span>geração de receita</span>, sem as amarras tradicionais</h2>
+      <p>O VM Partners se afasta dos modelos engessados. Aqui, o objetivo é o negócio na mesa.</p>
+    </div>
+    <div class="diff-cards fade-in">
+      <div class="diff-card">
+        <span class="diff-number">01</span>
+        <div class="diff-title">Foco em Performance</div>
+        <p class="diff-desc">Sem taxas de adesão ou custos de infraestrutura. O objetivo é simples: o negócio na mesa. Você só ganha quando a parceria gera resultado.</p>
+      </div>
+      <div class="diff-card">
+        <span class="diff-number">02</span>
+        <div class="diff-title">Liberdade de Atuação</div>
+        <p class="diff-desc">Sem exigência de exclusividade. Você mantém toda a sua autonomia de mercado e continua trabalhando do jeito que funciona para você.</p>
+      </div>
+      <div class="diff-card">
+        <span class="diff-number">03</span>
+        <div class="diff-title">Divisão Meritocrática</div>
+        <p class="diff-desc">Participação direta e clara na receita gerada através dos contratos viabilizados pela sua rede. Quanto mais você traz, mais você recebe.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PERFIL IDEAL — BLOCO 5 -->
+<section class="profile" id="perfil">
+  <div class="container">
+    <div class="profile-inner">
+      <div class="fade-in">
+        <div class="section-tag">Perfil Buscado</div>
+        <h2>Acesso restrito a quem já <span>domina</span> o ambiente corporativo</h2>
+        <p class="profile-intro">
+          Buscamos executivos, consultores e empresários que possuam presença real e influência comprovada. Não é para todo mundo — é para quem já tem.
+        </p>
+        <div class="profile-items">
+          <div class="profile-item">
+            <div class="profile-icon">
+              <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div class="profile-item-text">
+              <h4>Acesso Recorrente a Decisores C-Level</h4>
+              <p>Influência real e contínua sobre líderes de empresas de médio e grande porte.</p>
+            </div>
+          </div>
+          <div class="profile-item">
+            <div class="profile-icon">
+              <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            </div>
+            <div class="profile-item-text">
+              <h4>Capacidade de Identificar Gaps Comerciais</h4>
+              <p>Visão apurada para enxergar dores estratégicas em empresas de médio e grande porte.</p>
+            </div>
+          </div>
+          <div class="profile-item">
+            <div class="profile-icon">
+              <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <div class="profile-item-text">
+              <h4>Interesse em Expansão de Portfólio</h4>
+              <p>Disposição para integrar uma estrutura de inteligência comercial de padrão nacional ao seu portfólio de atuação.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="profile-right fade-in">
+        <!--
+          INSTRUÇÃO: Substitua pelo caminho da imagem real.
+          <img src="img/perfil-ideal.jpg" alt="Executivo de alta performance — VM Partners" style="width:100%;display:block;">
+        -->
+        <div class="profile-img-placeholder">
+          <div class="img-icon">
+            <svg viewBox="0 0 24 24" stroke="rgba(252,85,45,0.4)" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="1"/>
+              <circle cx="8.5" cy="8.5" r="1.5"/>
+              <polyline points="21 15 16 10 5 21"/>
+            </svg>
+          </div>
+          <span>Imagem · Perfil Ideal do Parceiro</span>
+          <span style="font-size:0.75rem;opacity:0.6;padding:0 32px;text-align:center;">Insira aqui uma imagem de um executivo, consultor ou empresário em contexto corporativo</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUALIFICAÇÃO CTA -->
+<section class="qualification" id="qualificacao">
+  <div class="container">
+    <div class="qual-header fade-in">
+      <div class="section-tag" style="justify-content:center;">Qualificação</div>
+      <h2>Pronto para <span>iniciar</span> sua candidatura?</h2>
+      <p>Converse com nosso assistente e nossa equipe vai avaliar o seu perfil em até 2 dias úteis.</p>
+      <button class="btn-primary fade-in" onclick="openChat()" style="margin-top:40px;font-size:0.9rem;padding:18px 52px;">Iniciar minha Candidatura</button>
+    </div>
+  </div>
+</section>
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">VM<span>·</span>Partners</div>
+  <p>Um canal estratégico da <strong>VendaMais</strong> · Todos os direitos reservados</p>
+</footer>
+
+<!-- CHAT POPUP -->
+<div class="chat-popup" id="chatPopup" role="dialog" aria-label="Assistente VM Partners">
+  <div class="chat-window">
+    <div class="chat-header">
+      <div class="chat-avatar-wrap">
+        <div class="chat-avatar-icon">VM</div>
+        <span class="chat-online"></span>
+      </div>
+      <div class="chat-header-info">
+        <strong>Assistente VM Partners</strong>
+        <span>Online agora</span>
+      </div>
+      <button class="chat-close" onclick="closeChat()" aria-label="Fechar chat">
+        <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="chat-messages" id="chatMessages"></div>
+    <div class="chat-quick-replies" id="chatQuickReplies"></div>
+    <div class="chat-input-area">
+      <input
+        type="text"
+        id="chatInput"
+        placeholder="Digite sua resposta..."
+        autocomplete="off"
+        inputmode="text"
+      >
+      <button id="chatSend" onclick="chatSendMessage()" aria-label="Enviar">
+        <svg viewBox="0 0 24 24">
+          <line x1="22" y1="2" x2="11" y2="13"/>
+          <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- CHATBOT BUBBLE -->
+<div class="chatbot-bubble" id="chatbot">
+  <div class="chatbot-tooltip" id="chatTooltip">
+    Iniciar qualificação agora 👋
+  </div>
+  <button class="chatbot-btn" id="chatbotBtn" onclick="toggleChat()" aria-label="Abrir assistente" aria-expanded="false">
+    <svg class="icon-chat" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 10H6v-2h12v2zm0-3H6V7h12v2z"/>
+    </svg>
+    <svg class="icon-close" viewBox="0 0 24 24">
+      <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+    </svg>
+  </button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="config.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
