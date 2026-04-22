@@ -81,6 +81,7 @@ nav {
   white-space: nowrap;
 }
 .nav-cta:hover { background: var(--red-dark); transform: translateY(-1px); }
+.cta-short { display: none; }
 
 /* ─── HERO ─── */
 .hero {
@@ -1120,7 +1121,9 @@ footer p {
 @media (max-width: 600px) {
   nav { padding: 14px 20px; gap: 10px; }
   .nav-logo { font-size: 0.95rem; letter-spacing: 0.06em; }
-  .nav-cta { font-size: 0.68rem; padding: 9px 14px; letter-spacing: 0.06em; }
+  .nav-cta { font-size: 0.68rem; padding: 9px 14px; letter-spacing: 0.06em; margin-right: 4px; }
+  .cta-full { display: none; }
+  .cta-short { display: inline; }
 
   .hero-left { padding: 96px 20px 36px; }
   .hero-right { padding: 0 20px 48px; }
@@ -1163,7 +1166,7 @@ footer p {
 @media (max-width: 400px) {
   nav { padding: 12px 16px; }
   .nav-logo { font-size: 0.85rem; }
-  .nav-cta { font-size: 0.62rem; padding: 8px 12px; }
+  .nav-cta { font-size: 0.62rem; padding: 8px 12px; margin-right: 6px; }
   .radio-group { flex-direction: column; }
   .chat-msg { max-width: 95%; }
 }
