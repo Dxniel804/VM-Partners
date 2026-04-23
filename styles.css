@@ -377,12 +377,12 @@ nav.scrolled {
 }
 
 .partners-label {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
+  font-weight: 600;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: var(--red);
+  color: #111;
   white-space: nowrap;
   padding: 0 36px 0 52px;
   flex-shrink: 0;
