@@ -24,6 +24,10 @@
 
 <!-- HERO -->
 <section class="hero">
+  <video class="hero-bg-video" autoplay muted loop playsinline>
+    <source src="Sales Leaders Summit [GMtIYTSrCaQ].mkv" type="video/x-matroska">
+  </video>
+  <div class="hero-video-overlay"></div>
   <div class="hero-glow-left"></div>
   <div class="hero-left">
     <div class="hero-eyebrow">VM Partners · Canal de Expansão</div>
@@ -38,26 +42,8 @@
     <div class="hero-brand">
       <span>Uma iniciativa da</span>
       <img src="imgs/vendamais_logo.png" alt="VendaMais" class="hero-brand-logo">
-    </div>
+    </div>  
   </div>
-  <div class="hero-right">
-    <div class="video-frame">
-      <span class="corner tl"></span>
-      <span class="corner tr"></span>
-      <span class="corner bl"></span>
-      <span class="corner br"></span>
-      <div class="video-placeholder">
-        <div class="play-btn">
-          <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
-        </div>
-        <span class="video-label">Vídeo — Marcelo Caetano</span>
-        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/FwMzijP2k04"
-          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;inset:0;"></iframe>
-        <p class="video-caption">
-          Entenda como a estrutura da VendaMais pode trabalhar ao lado do seu portfólio de relacionamentos para gerar resultados reais.
-        </p>
-      </div>
-    </div>
   </div>
 
   <!-- PARCEIROS — CARROSEL DE LOGOS -->
@@ -353,8 +339,61 @@
 </section>
 <!-- FOOTER -->
 <footer>
-  <div class="footer-logo">VM<span>·</span>Partners</div>
-  <p>Um canal estratégico da <strong>VendaMais</strong> · Todos os direitos reservados</p>
+  <div class="footer-top">
+
+    <div class="footer-brand-col">
+      <div class="footer-logo">VM<span>·</span>Partners</div>
+      <p class="footer-tagline">Um canal estratégico da <strong>VendaMais</strong> para executivos e empresários que já têm trânsito no mercado B2B.</p>
+
+      <div class="footer-contact">
+        <a href="tel:+554133333333" class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.58 3.47 2 2 0 0 1 3.55 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          (41) 3333-3333
+        </a>
+        <a href="mailto:parceiros@vendamais.com.br" class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          parceiros@vendamais.com.br
+        </a>
+      </div>
+
+      <div class="footer-socials">
+        <a href="#" class="footer-social-link">LinkedIn</a>
+        <a href="#" class="footer-social-link">Instagram</a>
+        <a href="#" class="footer-social-link">YouTube</a>
+      </div>
+    </div>
+
+    <div class="footer-faq-col">
+      <h3 class="footer-faq-title">Perguntas Frequentes</h3>
+      <div class="faq-list">
+
+        <details class="faq-item">
+          <summary class="faq-q">Como funciona a divisão de receita no VM Partners?</summary>
+          <div class="faq-a">A divisão é feita de forma meritocrática e direta: você participa da receita gerada pelos contratos viabilizados através da sua rede. Quanto mais negócios você conecta, maior a sua participação.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q">Existe exclusividade para ser um parceiro?</summary>
+          <div class="faq-a">Não. O VM Partners foi desenhado para respeitar a autonomia de cada parceiro. Você mantém todas as suas atividades e portfólio atuais — a parceria é um canal adicional, não uma substituição.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q">Quanto tempo leva para meu perfil ser avaliado?</summary>
+          <div class="faq-a">Após o envio da candidatura, nossa equipe analisa o perfil e retorna em até 2 dias úteis com o resultado e os próximos passos para formalizar a parceria.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q">Preciso ter experiência prévia em vendas consultivas?</summary>
+          <div class="faq-a">Não é requisito. O que buscamos é influência real e acesso recorrente a decisores C-Level. A VendaMais assume toda a operação comercial — o seu papel é abrir portas estratégicas.</div>
+        </details>
+
+      </div>
+    </div>
+
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 VM Partners · Uma iniciativa da <strong>VendaMais</strong> · Todos os direitos reservados</p>
+  </div>
 </footer>
 
 <!-- CHAT POPUP -->
@@ -396,12 +435,10 @@
 <!-- CHATBOT BUBBLE -->
 <div class="chatbot-bubble" id="chatbot">
   <div class="chatbot-tooltip" id="chatTooltip">
-    Iniciar qualificação agora 👋
+    Precisa de ajuda <strong>para aumentar as vendas na sua empresa?</strong>
   </div>
   <button class="chatbot-btn" id="chatbotBtn" onclick="toggleChat()" aria-label="Abrir assistente" aria-expanded="false">
-    <svg class="icon-chat" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 10H6v-2h12v2zm0-3H6V7h12v2z"/>
-    </svg>
+    <img src="imgs/fabiano_logo.jpeg" alt="Assistente VM Partners" class="chatbot-avatar-img">
     <svg class="icon-close" viewBox="0 0 24 24">
       <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
     </svg>

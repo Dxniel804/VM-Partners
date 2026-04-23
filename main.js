@@ -1,3 +1,15 @@
+// ─── NAV SCROLL STATE ────────────────────────────────────────────────────────
+const navEl = document.querySelector('nav');
+const aboutEl = document.querySelector('.about');
+
+function updateNavState() {
+  const aboutTop = aboutEl.getBoundingClientRect().top;
+  navEl.classList.toggle('scrolled', aboutTop <= navEl.offsetHeight + 20);
+}
+
+window.addEventListener('scroll', updateNavState, { passive: true });
+updateNavState();
+
 // ─── SCROLL ANIMATIONS ───────────────────────────────────────────────────────
 const fadeObserver = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
