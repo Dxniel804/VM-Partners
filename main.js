@@ -3,8 +3,7 @@ const navEl = document.querySelector('nav');
 const aboutEl = document.querySelector('.about');
 
 function updateNavState() {
-  const aboutTop = aboutEl.getBoundingClientRect().top;
-  navEl.classList.toggle('scrolled', aboutTop <= navEl.offsetHeight + 20);
+  navEl.classList.toggle('scrolled', window.scrollY > 50);
 }
 
 window.addEventListener('scroll', updateNavState, { passive: true });
