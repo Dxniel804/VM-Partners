@@ -379,7 +379,7 @@ nav.scrolled {
 .partners-label {
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: #111;
@@ -387,6 +387,10 @@ nav.scrolled {
   padding: 0 36px 0 52px;
   flex-shrink: 0;
   line-height: 1.3;
+}
+
+.partners-label strong {
+  font-weight: 800;
 }
 
 .partners-divider {

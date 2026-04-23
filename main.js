@@ -9,6 +9,39 @@ function updateNavState() {
 window.addEventListener('scroll', updateNavState, { passive: true });
 updateNavState();
 
+// ─── COUNTER ANIMATION ───────────────────────────────────────────────────────
+const counterEl = document.getElementById('counter-clientes');
+if (counterEl) {
+  const target = 2000;
+  const duration = 1800;
+  let started = false;
+
+  function formatBR(n) {
+    return n >= 1000
+      ? Math.floor(n / 1000) + '.' + String(n % 1000).padStart(3, '0')
+      : String(n);
+  }
+
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting && !started) {
+        started = true;
+        const startTime = performance.now();
+        function tick(now) {
+          const progress = Math.min((now - startTime) / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          counterEl.textContent = formatBR(Math.round(eased * target));
+          if (progress < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+        counterObserver.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  counterObserver.observe(counterEl);
+}
+
 // ─── SCROLL ANIMATIONS ───────────────────────────────────────────────────────
 const fadeObserver = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
