@@ -1344,7 +1344,9 @@ details[open] .faq-q::after { content: '−'; }
   #chatInput { font-size: 0.88rem; padding: 14px 16px; }
   #chatSend { padding: 0 16px; }
 
-  .partners-strip { padding: 32px 0; }
+  .partners-strip { padding: 24px 0; }
+  .partners-label { display: none; }
+  .partners-divider { display: none; }
   .logo-item { padding: 0 28px; }
 
   .chatbot-bubble { bottom: 16px; right: 16px; gap: 10px; }
