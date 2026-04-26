@@ -15,4 +15,4 @@ const EMAILJS_PUBLIC_KEY  = 'SUA_PUBLIC_KEY';   // ex: 'aBcDeFgHiJkLmNoP'
 
 // Modo teste: true = mostra dados no console, não envia email
 // Mude para false quando configurar o EmailJS
-const CHAT_TEST_MODE = true;
+const CHAT_TEST_MODE = false;

@@ -99,10 +99,10 @@ const STEPS = [
     errorMsg: 'E-mail inválido. Tente novamente.'
   },
   {
-    id: 'linkedin',
-    ask: 'Qual é a **URL do seu perfil no LinkedIn**?',
-    validate: v => v.trim().length > 5,
-    errorMsg: 'Informe a URL do seu perfil.'
+    id: 'empresa',
+    ask: 'Qual é o **nome da sua empresa** ou organização atual?',
+    validate: v => v.trim().length >= 2,
+    errorMsg: 'Informe o nome da empresa, por favor.'
   },
   {
     id: 'decisores',
@@ -130,7 +130,7 @@ const STEPS = [
 const ACKS = {
   nome:        data => `Prazer, ${data.nome.split(' ')[0]}! 👋`,
   email:       ()   => 'Perfeito.',
-  linkedin:    ()   => 'Anotado.',
+  empresa:     ()   => 'Anotado.',
   decisores:   ()   => 'Entendido.',
   frequencia:  ()   => 'Ótimo.',
   consultoria: data => data.consultoria === 'Sim' ? 'Experiência valiosa!' : 'Sem problema, não é requisito.'
@@ -158,7 +158,7 @@ function addBotMessage(text, options = []) {
   const div = document.createElement('div');
   div.className = 'chat-msg bot';
   div.innerHTML = `
-    <div class="chat-avatar">VM</div>
+    <img src="imgs/fabiano_logo.jpeg" alt="" class="chat-avatar">
     <div class="chat-bubble">${formatMsg(text)}</div>
   `;
   msgs.appendChild(div);
@@ -192,7 +192,7 @@ function showTyping() {
   div.className = 'chat-msg bot';
   div.id = 'typingIndicator';
   div.innerHTML = `
-    <div class="chat-avatar">VM</div>
+    <img src="imgs/fabiano_logo.jpeg" alt="" class="chat-avatar">
     <div class="chat-bubble typing-dots"><span></span><span></span><span></span></div>
   `;
   msgs.appendChild(div);
@@ -281,7 +281,7 @@ async function submitData() {
     const payload = {
       nome:        chatData.nome,
       email:       chatData.email,
-      linkedin:    chatData.linkedin,
+      empresa:     chatData.empresa,
       decisores:   chatData.decisores,
       frequencia:  chatData.frequencia,
       consultoria: chatData.consultoria,
@@ -293,7 +293,12 @@ async function submitData() {
       console.log('%c[VM Partners] Dados coletados (modo teste):', 'color:#FC552D;font-weight:bold', payload);
       await new Promise(r => setTimeout(r, 800));
     } else {
-      await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, payload);
+      const res = await fetch('/api/finalizar-avaliacao', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
     }
 
     hideTyping();
@@ -307,27 +312,15 @@ async function submitData() {
     hideTyping();
     addBotMessage(
       'Tive um problema ao enviar seus dados.\n\n' +
-      'Verifique as configurações do EmailJS em **config.js** ou recarregue a página e tente novamente.'
+      'Recarregue a página e tente novamente ou entre em contato diretamente com a equipe.'
     );
     input.placeholder = 'Erro ao enviar';
-    console.error('EmailJS error:', e);
+    console.error('[VM Partners] Erro ao enviar:', e);
   }
 }
 
 // ─── INIT ─────────────────────────────────────────────────────────────────────
 function chatInit() {
-  if (!CHAT_TEST_MODE && (!EMAILJS_PUBLIC_KEY || EMAILJS_PUBLIC_KEY === 'SUA_PUBLIC_KEY')) {
-    addBotMessage(
-      '⚙️ Para ativar o assistente, configure o EmailJS no arquivo **config.js**.\n\n' +
-      'Crie conta grátis em emailjs.com e preencha as 3 credenciais.'
-    );
-    document.getElementById('chatInput').disabled = true;
-    document.getElementById('chatSend').disabled = true;
-    return;
-  }
-
-  if (!CHAT_TEST_MODE) emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
-
   showTyping();
   setTimeout(() => {
     hideTyping();
