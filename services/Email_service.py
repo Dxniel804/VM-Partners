@@ -116,20 +116,37 @@ def enviar_email_avaliacao(dados: dict):
 
       <div class="section-title" style="margin-top:24px;">Qualificação</div>
       <div class="field">
-        <label>Decisores C-Level acessados</label>
-        <p>{dados.get('decisores', '—')}</p>
+        <label>Estado</label>
+        <p>{dados.get('estado', '—')}</p>
       </div>
       <div class="field">
-        <label>Frequência de identificação de oportunidades</label>
-        <p>{dados.get('frequencia', '—')}</p>
+        <label>LinkedIn</label>
+        <p>{dados.get('linkedin', '—')}</p>
       </div>
       <div class="field">
-        <label>Experiência em consultoria / mentoria</label>
-        <p>{dados.get('consultoria', '—')}</p>
+        <label>Cargo</label>
+        <p>{dados.get('cargo', '—')}</p>
       </div>
-
-      <div class="section-title" style="margin-top:24px;">Motivação</div>
-      <div class="motivacao-box">{dados.get('motivacao', '—')}</div>
+      <div class="field">
+        <label>WhatsApp</label>
+        <p>{dados.get('whatsapp', '—')}</p>
+      </div>
+      <div class="field">
+        <label>Perfil da Empresa</label>
+        <p>{dados.get('perfil_empresa', '—')}</p>
+      </div>
+      <div class="field">
+        <label>Acesso Recorrente a Decisores</label>
+        <p>{dados.get('acesso_Recorrente', '—')}</p>
+      </div>
+      <div class="field">
+        <label>Tipo de Oportunidades</label>
+        <div class="motivacao-box">{dados.get('tipo_oportunidades', '—')}</div>
+      </div>
+      <div class="field">
+        <label>Acesso e Nível de Relacionamento</label>
+        <div class="motivacao-box">{dados.get('acesso_e_nivel_relacionamento', '—')}</div>
+      </div>
 
       <div class="field" style="margin-top:24px;">
         <label>Recebido em</label>

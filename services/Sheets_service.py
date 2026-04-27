@@ -26,11 +26,15 @@ def adicionar_linha(dados: dict):
     row = [
         dados.get('nome', ''),
         dados.get('email', ''),
+        dados.get('estado', ''),
+        dados.get('linkedin', ''),
         dados.get('empresa', ''),
-        dados.get('decisores', ''),
-        dados.get('frequencia', ''),
-        dados.get('consultoria', ''),
-        dados.get('motivacao', ''),
+        dados.get('cargo', ''),
+        dados.get('whatsapp', ''),
+        dados.get('perfil_empresa', ''),
+        dados.get('acesso_Recorrente', ''),
+        dados.get('tipo_oportunidades', ''),
+        dados.get('acesso_e_nivel_relacionamento', ''),
         dados.get('data', datetime.now().strftime('%d/%m/%Y %H:%M'))
     ]
 
