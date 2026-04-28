@@ -8,7 +8,7 @@ from services.Sheets_service import adicionar_linha
 
 load_dotenv()
 
-app = Flask(__name__, static_folder='.', static_url_path='')
+app = Flask(__name__, static_folder='template', static_url_path='')
 CORS(app)
 
 

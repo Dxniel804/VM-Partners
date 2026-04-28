@@ -356,6 +356,28 @@ async function submitData() {
   const nums  = Array.from(band.querySelectorAll('.hw-step-num'));
   const cards = Array.from(band.querySelectorAll('.hw-card'));
   let maxIdx = -1;
+  let allPermanent = false;
+
+  function activateAll() {
+    allPermanent = true;
+    maxIdx = nums.length - 1;
+    nums.forEach(n  => n.classList.add('active'));
+    cards.forEach(c => c.classList.add('active'));
+  }
+
+  // Activate all cards when Block 3 (about) scrolls into view
+  const aboutSection = document.querySelector('.about');
+  if (aboutSection) {
+    const aboutObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          activateAll();
+          aboutObserver.disconnect();
+        }
+      });
+    }, { threshold: 0.15 });
+    aboutObserver.observe(aboutSection);
+  }
 
   nums.forEach((num, i) => {
     num.addEventListener('mouseenter', () => {
@@ -370,6 +392,7 @@ async function submitData() {
   });
 
   band.addEventListener('mouseleave', () => {
+    if (allPermanent) return;
     maxIdx = -1;
     nums.forEach(n  => n.classList.remove('active'));
     cards.forEach(c => c.classList.remove('active'));
