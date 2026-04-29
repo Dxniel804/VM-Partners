@@ -18,10 +18,17 @@
   <div class="nav-logo">
     VM<span class="dot">·</span>Partners
   </div>
-  <a href="#qualificacao" class="nav-cta">
-    <span class="cta-full">Iniciar Avaliação</span>
-    <span class="cta-short">Avaliação</span>
-  </a>
+  <div class="nav-menu-toggle" id="navMenuToggle" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <div class="nav-menu" id="navMenu">
+    <a href="#qualificacao" class="nav-cta" onclick="closeMobileMenu()">
+      <span class="cta-full">Iniciar Avaliação</span>
+      <span class="cta-short">Avaliação</span>
+    </a>
+  </div>
 </nav>
 
 <!-- HERO -->
@@ -312,11 +319,7 @@
 
   <!-- RIGHT: imagem corporativa -->
   <div class="gigantes-right">
-    <div>
-      
-      <img src="imgs/img_vm_secao.png" alt="Equipe VM Partners" class="gigantes-img">
-      <div class="gigantes-overlay"></div>
-    </div>
+    <img src="imgs/img_vm_secao.png" alt="Equipe VM Partners" class="gigantes-img">
 
     <div class="gigantes-quote">
       <p class="gigantes-quote-text">JUNTOS SOMOS GIGANTES</p>
@@ -330,7 +333,7 @@
   <div class="container">
     <div class="qual-header fade-in">
       <div class="section-tag qual-tag">Qualificação</div>
-      <h2><span style="color:var(--red)">Avaliação de Perfil</span></h2>
+      <h2><span style="color:var(--white)">Avaliação de Perfil</span></h2>
       <p>Este processo tem como objetivo identificar perfis com potencial real de geração de negócios dentro do modelo VM Partners.br<br><br>Converse com nosso assistente e nossa equipe vai avaliar o seu perfil em até 2 dias úteis.</p>
       <button class="btn-primary qual-btn fade-in" onclick="openChat()">Iniciar Avaliação</button>
     </div>

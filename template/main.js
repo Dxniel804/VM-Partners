@@ -1,3 +1,45 @@
+// ─── MOBILE MENU ───────────────────────────────────────────────────────────
+function toggleMobileMenu() {
+  const toggle = document.getElementById('navMenuToggle');
+  const menu = document.getElementById('navMenu');
+  
+  toggle.classList.toggle('active');
+  menu.classList.toggle('active');
+  
+  // Prevent body scroll when menu is open
+  document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
+}
+
+function closeMobileMenu() {
+  const toggle = document.getElementById('navMenuToggle');
+  const menu = document.getElementById('navMenu');
+  
+  toggle.classList.remove('active');
+  menu.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+// Close menu when clicking outside
+if (window.innerWidth <= 900) {
+  document.addEventListener('click', (e) => {
+    const menu = document.getElementById('navMenu');
+    const toggle = document.getElementById('navMenuToggle');
+    
+    if (menu.classList.contains('active') && 
+        !menu.contains(e.target) && 
+        !toggle.contains(e.target)) {
+      closeMobileMenu();
+    }
+  });
+}
+
+// Close menu on escape key
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    closeMobileMenu();
+  }
+});
+
 // ─── NAV SCROLL STATE ────────────────────────────────────────────────────────
 const navEl = document.querySelector('nav');
 const aboutEl = document.querySelector('.about');
@@ -349,55 +391,8 @@ async function submitData() {
 }
 
 // ─── STEPS HOVER (howworks) ──────────────────────────────────────────────────
-(function () {
-  const band = document.getElementById('howworksBand');
-  if (!band) return;
-
-  const nums  = Array.from(band.querySelectorAll('.hw-step-num'));
-  const cards = Array.from(band.querySelectorAll('.hw-card'));
-  let maxIdx = -1;
-  let allPermanent = false;
-
-  function activateAll() {
-    allPermanent = true;
-    maxIdx = nums.length - 1;
-    nums.forEach(n  => n.classList.add('active'));
-    cards.forEach(c => c.classList.add('active'));
-  }
-
-  // Activate all cards when Block 3 (about) scrolls into view
-  const aboutSection = document.querySelector('.about');
-  if (aboutSection) {
-    const aboutObserver = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          activateAll();
-          aboutObserver.disconnect();
-        }
-      });
-    }, { threshold: 0.15 });
-    aboutObserver.observe(aboutSection);
-  }
-
-  nums.forEach((num, i) => {
-    num.addEventListener('mouseenter', () => {
-      if (i > maxIdx) {
-        maxIdx = i;
-        for (let j = 0; j <= maxIdx; j++) {
-          nums[j].classList.add('active');
-          cards[j].classList.add('active');
-        }
-      }
-    });
-  });
-
-  band.addEventListener('mouseleave', () => {
-    if (allPermanent) return;
-    maxIdx = -1;
-    nums.forEach(n  => n.classList.remove('active'));
-    cards.forEach(c => c.classList.remove('active'));
-  });
-}());
+// Cards agora são sempre visíveis, não precisam mais de ativação por hover
+// Mantendo apenas para referência futura se necessário
 
 // ─── INIT ─────────────────────────────────────────────────────────────────────
 function chatInit() {
