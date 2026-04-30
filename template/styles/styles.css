@@ -2775,11 +2775,11 @@ details[open] .faq-q::after { content: '−'; }
 
 /* highlight variant (VendaMais) */
 .flow-card--highlight {
-  border-color: rgba(252,85,45,0.35);
-  background: rgba(252,85,45,0.06);
-  box-shadow: 0 0 0 1px rgba(252,85,45,0.18), 0 0 48px rgba(252,85,45,0.09);
+  border-color: rgba(252,85,45,0.18);
+  background: rgba(252,85,45,0.03);
+  box-shadow: none;
 }
-.flow-card--highlight::after { opacity: 0.55; }
+.flow-card--highlight::after { opacity: 0.25; }
 
 /* ghost number */
 .flow-ghost-num {
@@ -2877,15 +2877,6 @@ details[open] .faq-q::after { content: '−'; }
   animation: connGlow 3s linear infinite;
 }
 
-.flow-conn-arrow {
-  position: absolute;
-  right: -5px; top: 50%;
-  transform: translateY(-50%);
-  width: 0; height: 0;
-  border-top: 4px solid transparent;
-  border-bottom: 4px solid transparent;
-  border-left: 6px solid rgba(252,85,45,0.5);
-}
 
 .flow-conn-label {
   position: absolute;
@@ -2957,16 +2948,7 @@ details[open] .faq-q::after { content: '−'; }
     animation: connGlowV 3s linear infinite;
   }
 
-  .flow-conn-arrow {
-    right: auto; top: auto;
-    bottom: -5px; left: 50%;
-    transform: translateX(-50%);
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent;
-    border-top: 6px solid rgba(252,85,45,0.5);
-    border-bottom: none;
-  }
-
+  
   .flow-conn-label { display: none; }
 
   @keyframes connGlowV {
@@ -3032,11 +3014,11 @@ details[open] .faq-q::after { content: '−'; }
   box-shadow: 0 18px 52px rgba(0,64,72,0.08), 0 0 0 1px rgba(0,64,72,0.1);
 }
 .flow-section .flow-card--highlight {
-  border-color: rgba(0,64,72,0.22);
-  background: rgba(0,64,72,0.04);
-  box-shadow: 0 0 0 1px rgba(0,64,72,0.15), 0 4px 32px rgba(0,64,72,0.07);
+  border-color: rgba(0,64,72,0.12);
+  background: rgba(0,64,72,0.02);
+  box-shadow: none;
 }
-.flow-section .flow-card--highlight::after { opacity: 0.3; }
+.flow-section .flow-card--highlight::after { opacity: 0.15; }
 
 /* Card text */
 .flow-section .flow-card h3 { color: var(--black); }
@@ -3046,15 +3028,11 @@ details[open] .faq-q::after { content: '−'; }
 /* Connectors — teal */
 .flow-section .flow-conn-line { background: rgba(0,64,72,0.14); }
 .flow-section .flow-conn-glow { display: none; }
-.flow-section .flow-conn-arrow { border-left-color: rgba(0,64,72,0.36); }
 .flow-section .flow-conn-label { color: rgba(0,64,72,0.36); }
 
 /* Mobile vertical connector — teal */
 @media (max-width: 820px) {
-  .flow-section .flow-conn-arrow {
-    border-top-color: rgba(0,64,72,0.36);
   }
-}
 
 /* ═══════════════════════════════════════════════
    BLOCO 5 — WHITE / TEAL THEME + SMALLER IMAGE
