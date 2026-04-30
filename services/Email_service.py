@@ -8,7 +8,7 @@ load_dotenv()
 def enviar_email_avaliacao(dados: dict):
     resend.api_key = os.getenv('RESEND_API_KEY')
 
-    recipient = os.getenv('RECIPIENT_EMAIL', 'dani.guto911@gmail.com')
+    recipient = os.getenv('RECIPIENT_EMAIL', 'fabiano.silva@vendamais.com.br')
 
     html_body = f"""
 <!DOCTYPE html>
