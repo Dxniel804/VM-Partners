@@ -7,7 +7,7 @@
 <link rel="icon" type="image/png" href="imgs/Logos_site_VM.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Syne:wght@700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Syne:wght@700;800&family=Inter:wght@300;400;500;600&family=Tektur:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles/styles.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
@@ -261,6 +261,7 @@
 
 <!-- PARCERIA — BLOCO 5 -->
 <section class="gigantes" id="perfil">
+  <div class="gigantes-row">
 
   <!-- LEFT: conteúdo e perfil -->
   <div class="gigantes-left">
@@ -270,7 +271,7 @@
 
       <h2 class="gigantes-headline">
         Seu relacionamento.<br>
-        Nossa <span>execução</span>.<br>
+        Nossa <span>execução.</span><br>
         Resultado real.
       </h2>
 
@@ -279,18 +280,54 @@
       </p>
 
       <div class="gigantes-checklist">
+
         <div class="gigantes-check-item">
-          <div class="check-dot"></div>
-          <span>Acesso recorrente a decisores C-Level</span>
+          <div class="check-icon">
+            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="16" cy="10" r="5" stroke="#FF5000" stroke-width="2" fill="none"/>
+              <path d="M6 27c0-5.523 4.477-10 10-10s10 4.477 10 10" stroke="#FF5000" stroke-width="2" stroke-linecap="round" fill="none"/>
+              <circle cx="25" cy="10" r="3.5" stroke="#FF5000" stroke-width="1.5" fill="none"/>
+              <path d="M28 21c1.5 1 2.5 2.5 2.5 4.5" stroke="#FF5000" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+            </svg>
+          </div>
+          <div class="check-text">
+            <strong>Acesso recorrente a decisores C-Level*</strong>
+            <span>Relacionamento com quem decide e tem orçamento.</span>
+          </div>
         </div>
+
         <div class="gigantes-check-item">
-          <div class="check-dot"></div>
-          <span>Presença consolidada no mercado corporativo</span>
+          <div class="check-icon">
+            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4" y="8" width="14" height="20" stroke="#FF5000" stroke-width="2" fill="none"/>
+              <rect x="18" y="14" width="10" height="14" stroke="#FF5000" stroke-width="2" fill="none"/>
+              <line x1="8" y1="13" x2="11" y2="13" stroke="#FF5000" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="8" y1="18" x2="11" y2="18" stroke="#FF5000" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="8" y1="23" x2="11" y2="23" stroke="#FF5000" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="21" y1="19" x2="24" y2="19" stroke="#FF5000" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="21" y1="24" x2="24" y2="24" stroke="#FF5000" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="check-text">
+            <strong>Presença consolidada no mercado corporativo</strong>
+            <span>Atuação sólida e constante em grandes empresas.</span>
+          </div>
         </div>
+
         <div class="gigantes-check-item">
-          <div class="check-dot"></div>
-          <span>Interesse em expansão de portfólio de receita</span>
+          <div class="check-icon">
+            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <polyline points="4,24 12,16 18,20 28,8" stroke="#FF5000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              <polyline points="22,8 28,8 28,14" stroke="#FF5000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              <line x1="4" y1="28" x2="28" y2="28" stroke="#FF5000" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="check-text">
+            <strong>Interesse em expansão de portfólio de receita</strong>
+            <span>Busca ativa por novas soluções e parceiros estratégicos.</span>
+          </div>
         </div>
+
       </div>
 
       <div class="gigantes-metrics">
@@ -309,21 +346,175 @@
           <span class="metric-label">Foco corporativo</span>
         </div>
       </div>
-      <img src="imgs/vendamais_logo.png" alt="VendaMais" style="height: 60px; margin-top: 0rem;">
+
+      <!-- Carrosel métricas — apenas mobile -->
+      <div class="metrics-marquee-track">
+        <div class="metrics-marquee-inner">
+          <div class="gigantes-metric metrics-marquee-item">
+            <span class="metric-value">+30</span>
+            <span class="metric-label">Anos de mercado</span>
+          </div>
+          <div class="gigantes-metric metrics-marquee-item">
+            <span class="metric-value">100%</span>
+            <span class="metric-label">Baseado em resultado</span>
+          </div>
+          <div class="gigantes-metric metrics-marquee-item">
+            <span class="metric-value">B2B</span>
+            <span class="metric-label">Foco corporativo</span>
+          </div>
+          <!-- duplicado para loop contínuo -->
+          <div class="gigantes-metric metrics-marquee-item">
+            <span class="metric-value">+30</span>
+            <span class="metric-label">Anos de mercado</span>
+          </div>
+          <div class="gigantes-metric metrics-marquee-item">
+            <span class="metric-value">100%</span>
+            <span class="metric-label">Baseado em resultado</span>
+          </div>
+          <div class="gigantes-metric metrics-marquee-item">
+            <span class="metric-value">B2B</span>
+            <span class="metric-label">Foco corporativo</span>
+          </div>
+        </div>
+      </div>
+
+      <img src="imgs/vendamais_logo.png" alt="VendaMais" class="vendamais-logo">
 
     </div>
   </div>
 
-  <!-- RIGHT: imagem corporativa -->
+  <!-- RIGHT: insight cards -->
   <div class="gigantes-right">
-    <img src="imgs/img_vm_secao.png" alt="Equipe VM Partners" class="gigantes-img">
+    <div class="insight-cards">
 
-    <div class="gigantes-quote">
-      <p class="gigantes-quote-text">JUNTOS SOMOS GIGANTES</p>
+      <div class="insight-card">
+        <div class="insight-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#FF5000" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        </div>
+        <div class="insight-body">
+          <span class="insight-value">R$ 0</span>
+          <span class="insight-label">Sem taxas ou custo de entrada</span>
+          <span class="insight-tip">Nenhuma taxa de adesão, nenhum custo operacional. O modelo é 100% baseado em resultado gerado.</span>
+        </div>
+      </div>
+
+      <div class="insight-card">
+        <div class="insight-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#FF5000" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div class="insight-body">
+          <span class="insight-value">C-Level</span>
+          <span class="insight-label">Acesso direto a quem decide</span>
+          <span class="insight-tip">Você conecta quem decide e tem orçamento. A VendaMais estrutura e conduz o fechamento.</span>
+        </div>
+      </div>
+
+      <div class="insight-card">
+        <div class="insight-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#FF5000" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+        </div>
+        <div class="insight-body">
+          <span class="insight-value">100%</span>
+          <span class="insight-label">Você ganha quando o projeto fecha</span>
+          <span class="insight-tip">Participação direta sobre o valor do contrato viabilizado. Quanto mais você indica, mais você recebe.</span>
+        </div>
+      </div>
+
+      <div class="insight-card">
+        <div class="insight-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#FF5000" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3H8a2 2 0 0 0-2 2v2h12V5a2 2 0 0 0-2-2z"/></svg>
+        </div>
+        <div class="insight-body">
+          <span class="insight-value">B2B</span>
+          <span class="insight-label">Empresas de médio e grande porte</span>
+          <span class="insight-tip">Foco em organizações com potencial real de crescimento e necessidade de evolução comercial.</span>
+        </div>
+      </div>
+
+      <div class="insight-card">
+        <div class="insight-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#FF5000" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
+        <div class="insight-body">
+          <span class="insight-value">+30 anos</span>
+          <span class="insight-label">VendaMais no mercado</span>
+          <span class="insight-tip">Metodologia validada em décadas de operação comercial em grandes empresas brasileiras.</span>
+        </div>
+      </div>
+
+      <div class="insight-card">
+        <div class="insight-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#FF5000" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+        </div>
+        <div class="insight-body">
+          <span class="insight-value">Sem vínculo</span>
+          <span class="insight-label">Sem exclusividade obrigatória</span>
+          <span class="insight-tip">Mantenha sua atuação atual. O VM Partners funciona como um canal paralelo dentro do seu contexto profissional.</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  </div><!-- fim gigantes-row -->
+
+  <!-- BADGES: carrosel full-width — desktop only -->
+  <div class="badges-strip">
+    <div class="badges-marquee-inner">
+
+      <!-- SET 1 -->
+      <div class="badge-marquee-item">
+        <div class="badge-icon"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 3L4 8v8c0 7 5.5 13 12 14 6.5-1 12-7 12-14V8L16 3z" stroke="#FF5000" stroke-width="2" fill="none"/><polyline points="11,16 14.5,19.5 21,13" stroke="#FF5000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="badge-text">Operação 100% Ética<br>e Transparente</div>
+      </div>
+      <div class="badge-marquee-item">
+        <div class="badge-icon"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="12" stroke="#FF5000" stroke-width="2" fill="none"/><circle cx="16" cy="16" r="7" stroke="#FF5000" stroke-width="2" fill="none"/><circle cx="16" cy="16" r="2.5" fill="#FF5000"/><line x1="24" y1="8" x2="20" y2="12" stroke="#FF5000" stroke-width="2" stroke-linecap="round"/><polyline points="22,7 24,7 24,9" stroke="#FF5000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="badge-text">Metodologia Validada<br>e Replicável</div>
+      </div>
+      <div class="badge-marquee-item">
+        <div class="badge-icon"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="10" r="4" stroke="#FF5000" stroke-width="2" fill="none"/><circle cx="22" cy="10" r="4" stroke="#FF5000" stroke-width="2" fill="none"/><path d="M3 27c0-4.97 4.03-9 9-9s9 4.03 9 9" stroke="#FF5000" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M22 18c3.87 0 7 3.13 7 7" stroke="#FF5000" stroke-width="2" stroke-linecap="round" fill="none"/></svg></div>
+        <div class="badge-text">Time Especialista<br>Focado em Resultados</div>
+      </div>
+      <div class="badge-marquee-item">
+        <div class="badge-icon"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 4h12v10a6 6 0 01-12 0V4z" stroke="#FF5000" stroke-width="2" fill="none"/><path d="M10 8H6a3 3 0 003 3" stroke="#FF5000" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M22 8h4a3 3 0 01-3 3" stroke="#FF5000" stroke-width="2" stroke-linecap="round" fill="none"/><line x1="16" y1="20" x2="16" y2="26" stroke="#FF5000" stroke-width="2" stroke-linecap="round"/><line x1="11" y1="28" x2="21" y2="28" stroke="#FF5000" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <div class="badge-text">Foco Total em<br>Geração de Oportunidades</div>
+      </div>
+
+      <!-- SET 2 — duplicado para loop -->
+      <div class="badge-marquee-item">
+        <div class="badge-icon"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 3L4 8v8c0 7 5.5 13 12 14 6.5-1 12-7 12-14V8L16 3z" stroke="#FF5000" stroke-width="2" fill="none"/><polyline points="11,16 14.5,19.5 21,13" stroke="#FF5000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="badge-text">Operação 100% Ética<br>e Transparente</div>
+      </div>
+      <div class="badge-marquee-item">
+        <div class="badge-icon"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="12" stroke="#FF5000" stroke-width="2" fill="none"/><circle cx="16" cy="16" r="7" stroke="#FF5000" stroke-width="2" fill="none"/><circle cx="16" cy="16" r="2.5" fill="#FF5000"/><line x1="24" y1="8" x2="20" y2="12" stroke="#FF5000" stroke-width="2" stroke-linecap="round"/><polyline points="22,7 24,7 24,9" stroke="#FF5000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="badge-text">Metodologia Validada<br>e Replicável</div>
+      </div>
+      <div class="badge-marquee-item">
+        <div class="badge-icon"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="10" r="4" stroke="#FF5000" stroke-width="2" fill="none"/><circle cx="22" cy="10" r="4" stroke="#FF5000" stroke-width="2" fill="none"/><path d="M3 27c0-4.97 4.03-9 9-9s9 4.03 9 9" stroke="#FF5000" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M22 18c3.87 0 7 3.13 7 7" stroke="#FF5000" stroke-width="2" stroke-linecap="round" fill="none"/></svg></div>
+        <div class="badge-text">Time Especialista<br>Focado em Resultados</div>
+      </div>
+      <div class="badge-marquee-item">
+        <div class="badge-icon"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 4h12v10a6 6 0 01-12 0V4z" stroke="#FF5000" stroke-width="2" fill="none"/><path d="M10 8H6a3 3 0 003 3" stroke="#FF5000" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M22 8h4a3 3 0 01-3 3" stroke="#FF5000" stroke-width="2" stroke-linecap="round" fill="none"/><line x1="16" y1="20" x2="16" y2="26" stroke="#FF5000" stroke-width="2" stroke-linecap="round"/><line x1="11" y1="28" x2="21" y2="28" stroke="#FF5000" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <div class="badge-text">Foco Total em<br>Geração de Oportunidades</div>
+      </div>
+
     </div>
   </div>
 
 </section>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
 
 <!-- QUALIFICAÇÃO CTA -->
 <section class="qualification" id="qualificacao">
