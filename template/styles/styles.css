@@ -3067,7 +3067,7 @@ body {
   flex: 0 0 52%;
   display: flex;
   align-items: center;
-  padding: 4.5rem 4rem 4.5rem 5rem;
+  padding: 3.5rem 4rem 2rem 5rem;
   background: #ffffff;
   position: relative;
   z-index: 2;
@@ -3175,7 +3175,7 @@ body {
   display: flex;
   align-items: center;
   gap: 1.8rem;
-  margin-bottom: 2.2rem;
+  margin-bottom: 1.2rem;
 }
 .gigantes-metric {
   display: flex;
@@ -3215,7 +3215,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 3rem 3rem 3rem 2rem;
+  padding: 2rem 3rem 2rem 2rem;
   background: #fff;
 }
 
@@ -3351,7 +3351,7 @@ body {
   width: 100%;
   overflow: hidden;
   border-top: 1px solid #f0f0f0;
-  padding: 1.4rem 0;
+  padding: 1rem 0;
   background: #fff;
   -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 6%, #000 94%, transparent 100%);
   mask-image: linear-gradient(90deg, transparent 0%, #000 6%, #000 94%, transparent 100%);
@@ -3366,14 +3366,16 @@ body {
 
 .badge-marquee-item {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 12px;
+  justify-content: center;
+  gap: 8px;
   padding: 0 3.5rem;
   flex-shrink: 0;
-  border-right: 1px solid #eee;
+  text-align: center;
 }
-.badge-marquee-item:last-child {
-  border-right: none;
+.badge-marquee-item .badge-text {
+  text-align: center;
 }
 
 /* Badges abaixo da imagem */
