@@ -2740,7 +2740,7 @@ details[open] .faq-q::after { content: '−'; }
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: #e8631a;
-  opacity: 0.50;
+  opacity: 0.60;
   white-space: nowrap;
 }
 
