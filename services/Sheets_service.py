@@ -1,5 +1,6 @@
 import gspread
 import os
+import json
 from oauth2client.service_account import ServiceAccountCredentials
 from datetime import datetime
 from dotenv import load_dotenv
@@ -13,15 +14,20 @@ SCOPE = [
 
 
 def adicionar_linha(dados: dict):
-    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    creds_path = os.path.join(base_dir, 'credentials.json')
+    google_creds_env = os.getenv('GOOGLE_CREDENTIALS')
+    if google_creds_env:
+        creds_dict = json.loads(google_creds_env)
+        creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, SCOPE)
+    else:
+        base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        creds_path = os.path.join(base_dir, 'credentials.json')
+        creds = ServiceAccountCredentials.from_json_keyfile_name(creds_path, SCOPE)
 
-    creds = ServiceAccountCredentials.from_json_keyfile_name(creds_path, SCOPE)
     client = gspread.authorize(creds)
 
     spreadsheet_id = os.getenv('SPREADSHEET_ID')
 
-    sheet = client.open_by_key(spreadsheet_id).get_worksheet(0)
+    sheet = client.open_by_key(spreadsheet_id).worksheet('Avaliações')
 
     row = [
         dados.get('nome', ''),
