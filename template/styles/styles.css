@@ -2641,6 +2641,7 @@ details[open] .faq-q::after { content: '−'; }
   .hw-card h3 { margin-top: 0; }
   .hw-card:hover { transform: translateY(-4px); }
 }
+
 /* ===========================
    BLOCO 3 — SEÇÃO #SOBRE
    =========================== */
@@ -2726,7 +2727,7 @@ details[open] .faq-q::after { content: '−'; }
   display: flex;
   gap: 80px;
   width: max-content;
-  animation: vmp-marquee 30s linear infinite;
+  animation: vmp-marquee 20s linear infinite;
 }
 
 .vmp-bg-text-track span {
@@ -2736,7 +2737,7 @@ details[open] .faq-q::after { content: '−'; }
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: #e8631a;
-  opacity: 0.60;
+  opacity: 0.70;
   white-space: nowrap;
 }
 
