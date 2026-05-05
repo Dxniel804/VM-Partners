@@ -27,7 +27,7 @@ def adicionar_linha(dados: dict):
 
     spreadsheet_id = os.getenv('SPREADSHEET_ID')
 
-    sheet = client.open_by_key(spreadsheet_id).worksheet('Avaliações')
+    sheet = client.open_by_key(spreadsheet_id).get_worksheet(0)
 
     row = [
         dados.get('nome', ''),
