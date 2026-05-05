@@ -2845,7 +2845,7 @@ details[open] .faq-q::after { content: '−'; }
 
 .vmp-name {
   font-family: 'Syne', sans-serif;
-  font-size: 0.78rem;
+  font-size: 1.3rem;
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -2870,7 +2870,7 @@ details[open] .faq-q::after { content: '−'; }
 
 .vmp-role {
   font-family: 'Syne', sans-serif;
-  font-size: 0.62rem;
+  font-size: 0.8rem;
   font-weight: 400;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -2893,43 +2893,76 @@ details[open] .faq-q::after { content: '−'; }
 }
 
 @media (max-width: 640px) {
-  .vmp-section {
-    position: relative;
+    .vmp-bg-text-wrap {
+    top: 15%; /* era 8% */
+  }
+  
+  .vmp-top-bar {
+    border-bottom: none;
+  }
+
+  .vmp-img {
+    height: 470px;
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  .vmp-img-wrap {
+    height: 550px;
+    background: #021a22;
+    display: flex;
+    align-items: flex-end;
   }
 
   .vmp-names-bar {
     position: absolute;
-    bottom: 40px;
+    bottom: 12px;
     left: 0;
+    transform: none;
     width: 100%;
+    max-width: 100%;
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     border-top: none;
     z-index: 10;
+    padding: 0 4px;
+    box-sizing: border-box;
   }
 
   .vmp-person {
+    display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 6px 2px;
     border: none;
-    gap: 4px;
+    padding: 4px 2px;
+    gap: 2px;
   }
 
-  .vmp-connector { display: none; }
+  .vmp-connector {
+    width: 1px;
+    height: 12px;
+    margin-bottom: 4px;
+  }
 
   .vmp-name {
-    font-size: 0.48rem;
-    letter-spacing: 0.06em;
-    padding: 4px 6px;
-    white-space: normal;
+    font-size: 0.58rem !important;
+    letter-spacing: 0.05em;
+    padding: 3px 6px;
+    white-space: nowrap;
+    word-break: normal;
     text-align: center;
+    background: transparent;
+    border: none;
   }
 
   .vmp-role {
-    font-size: 0.45rem;
+    font-size: 0.45rem !important;
     text-align: center;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
   }
 }
+
 
 /* ─── HEADER ─── */
 .flow-header {
