@@ -10,7 +10,7 @@ load_dotenv()
 def enviar_email_avaliacao(dados: dict):
     smtp_user     = os.getenv('BREVO_SMTP_USER', 'a6f07c001@smtp-brevo.com')
     smtp_password = os.getenv('BREVO_SMTP_PASSWORD')
-    sender        = os.getenv('SENDER_EMAIL', 'daniel.batista@vendamais.com.br')
+    sender        = os.getenv('SENDER_EMAIL', 'daniel.batista@vendamais.com.br').strip()
     recipient     = os.getenv('RECIPIENT_EMAIL', 'daniel.batista@vendamais.com.br')
 
     html_body = f"""
