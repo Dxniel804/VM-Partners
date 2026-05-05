@@ -2893,13 +2893,13 @@ details[open] .faq-q::after { content: '−'; }
 }
 
 @media (max-width: 640px) {
+
     .vmp-bg-text-wrap {
     top: 15%; /* era 8% */
   }
-  
-  .vmp-top-bar {
-    border-bottom: none;
-  }
+
+
+
 
   .vmp-img {
     height: 470px;
@@ -2912,6 +2912,8 @@ details[open] .faq-q::after { content: '−'; }
     background: #021a22;
     display: flex;
     align-items: flex-end;
+    margin-top: 0;
+    padding-top: 0;
   }
 
   .vmp-names-bar {
