@@ -153,10 +153,6 @@ nav.scrolled {
 
 /* Mobile video optimization */
 @media (max-width: 768px) {
-  .hero-bg-video {
-    display: none;
-  }
-  
   .hero::before {
     content: '';
     position: absolute;
@@ -2897,12 +2893,9 @@ details[open] .faq-q::after { content: '−'; }
     .vmp-bg-text-wrap {
     top: 15%; /* era 8% */
   }
-
-
-
-
+  
   .vmp-img {
-    height: 470px;
+    height: 430px;
     object-fit: cover;
     object-position: center center;
   }
@@ -2947,7 +2940,7 @@ details[open] .faq-q::after { content: '−'; }
   }
 
   .vmp-name {
-    font-size: 0.58rem !important;
+    font-size: 0.54rem !important;
     letter-spacing: 0.05em;
     padding: 3px 6px;
     white-space: nowrap;
