@@ -1,13 +1,15 @@
-import resend
+import smtplib
 import os
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
 from dotenv import load_dotenv
 
 load_dotenv()
 
 
 def enviar_email_avaliacao(dados: dict):
-    resend.api_key = os.getenv('RESEND_API_KEY')
-
+    gmail_user = os.getenv('GMAIL_USER')
+    gmail_password = os.getenv('GMAIL_APP_PASSWORD')
     recipient = os.getenv('RECIPIENT_EMAIL', 'fabiano.silva@vendamais.com.br')
 
     html_body = f"""
@@ -159,12 +161,16 @@ def enviar_email_avaliacao(dados: dict):
 </html>
 """
 
-    params = {
-        "from": "onboarding@resend.dev",
-        "to": [recipient],
-        "subject": f"🚀 Nova Avaliação — {dados.get('nome', 'Candidato')} ({dados.get('empresa', '')})",
-        "html": html_body,
-    }
+    msg = MIMEMultipart('alternative')
+    msg['Subject'] = f"Nova Avaliacao — {dados.get('nome', 'Candidato')} ({dados.get('empresa', '')})"
+    msg['From'] = f"VM Partners <{gmail_user}>"
+    msg['To'] = recipient
+    msg.attach(MIMEText(html_body, 'html'))
 
-    email = resend.Emails.send(params)
-    return email
+    with smtplib.SMTP('smtp.gmail.com', 587) as server:
+        server.ehlo()
+        server.starttls()
+        server.login(gmail_user, gmail_password)
+        server.sendmail(gmail_user, recipient, msg.as_string())
+
+    return True
