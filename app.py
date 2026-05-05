@@ -29,15 +29,19 @@ def finalizar_avaliacao():
         enviar_email_avaliacao(dados)
         resultado['email'] = 'ok'
     except Exception as e:
+        import traceback
         resultado['email'] = f'erro: {e}'
         print(f'[Email] Falha: {e}')
+        traceback.print_exc()
 
     try:
         adicionar_linha(dados)
         resultado['sheets'] = 'ok'
     except Exception as e:
+        import traceback
         resultado['sheets'] = f'erro: {e}'
         print(f'[Sheets] Falha: {e}')
+        traceback.print_exc()
 
     status_code = 200 if 'ok' in resultado.values() else 500
     return jsonify(resultado), status_code
