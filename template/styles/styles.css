@@ -72,6 +72,8 @@ nav.scrolled {
   white-space: nowrap;
   position: static;
   transform: none;
+  text-decoration: none;
+  cursor: pointer;
 }
 .nav-logo .dot { color: var(--red); }
 
