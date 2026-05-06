@@ -195,7 +195,6 @@ const STEPS = [
 ];
 
 const ACKS = {
-  nome:        data => `Prazer, ${data.nome.split(' ')[0]}! 👋`,
   email:       ()   => 'Perfeito.',
   empresa:     ()   => 'Anotado.',
   decisores:   ()   => 'Entendido.',
@@ -321,9 +320,11 @@ function chatSendMessage() {
   if (chatDone) return;
   const input = document.getElementById('chatInput');
   const text = input.value.trim();
-  if (!text) return;
+  const step = STEPS[currentStep];
+  const isOptional = step && step.validate && step.validate('');
+  if (!text && !isOptional) return;
   input.value = '';
-  addUserMessage(text);
+  if (text) addUserMessage(text);
   processAnswer(text);
 }
 
