@@ -130,7 +130,7 @@ setTimeout(() => {
 const STEPS = [
   {
     id: 'nome',
-    ask: 'Olá! Olá! Sou o Sócio e Diretor Comercial da VendaMais. Para começar, qual é o seu **nome completo**?',
+    ask: 'Olá! Sou o Sócio e Diretor Comercial da VendaMais. Para começar, qual é o seu **nome completo**?',
     validate: v => v.trim().split(/\s+/).length >= 2,
     errorMsg: 'Informe nome e sobrenome, por favor.'
   },
