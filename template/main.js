@@ -272,14 +272,23 @@ function hideTyping() {
 
 function setInputForStep(step) {
   const input = document.getElementById('chatInput');
+  const skipBtn = document.getElementById('chatSkipBtn');
+  const isOptional = step && step.validate && step.validate('');
   if (step && step.options) {
     input.disabled = true;
     input.placeholder = 'Selecione uma opção acima...';
+    skipBtn.style.display = 'none';
   } else {
     input.disabled = false;
     input.placeholder = 'Digite sua resposta...';
     input.focus();
+    skipBtn.style.display = isOptional ? 'block' : 'none';
   }
+}
+
+function chatSkipOptional() {
+  if (chatDone) return;
+  processAnswer('');
 }
 
 // ─── FLOW ─────────────────────────────────────────────────────────────────────
@@ -322,9 +331,15 @@ function chatSendMessage() {
   const text = input.value.trim();
   const step = STEPS[currentStep];
   const isOptional = step && step.validate && step.validate('');
-  if (!text && !isOptional) return;
+  if (!text) {
+    if (isOptional) {
+      showTyping();
+      setTimeout(() => { hideTyping(); addBotMessage('Adicione uma resposta ou clique em Próximo para continuar.'); }, 400);
+    }
+    return;
+  }
   input.value = '';
-  if (text) addUserMessage(text);
+  addUserMessage(text);
   processAnswer(text);
 }
 
