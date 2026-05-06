@@ -165,9 +165,9 @@ const STEPS = [
   },
   {
     id: 'whatsapp',
-    ask: 'Se preferir, pode compartilhar seu número de WhatsApp para contato (opcional).',
-    validate: v => !v.trim() || /^\+?\d{7,15}$/.test(v.trim()),
-    errorMsg: 'Número inválido. Informe no formato internacional, ex: +5511999998888, ou deixe em branco.'
+    ask: 'Qual é o seu número de **WhatsApp** para contato?',
+    validate: v => /^\+?\d{7,15}$/.test(v.trim()),
+    errorMsg: 'Número inválido. Informe no formato internacional, ex: +5511999998888.'
   },
   {
     id: 'perfil_empresa',
