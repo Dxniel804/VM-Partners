@@ -391,7 +391,7 @@ async function submitData() {
     hideTyping();
     addBotMessage(
       `Obrigado, **${chatData.nome.split(' ')[0]}**! 🎉\n\n` +
-      `Candidatura registrada com sucesso. Nossa equipe vai analisar seu perfil e entrar em contato em até **2 dias úteis** no e-mail **${chatData.email}**.`
+      `Candidatura registrada com sucesso. Nosso Diretor vai analisar o seu perfil e entrar em contato no e-mail - **${chatData.email}**.`
     );
     input.placeholder = 'Candidatura enviada — obrigado!';
 
