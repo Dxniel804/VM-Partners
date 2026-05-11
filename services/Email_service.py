@@ -8,10 +8,9 @@ load_dotenv()
 
 
 def enviar_email_avaliacao(dados: dict):
-    smtp_user     = os.getenv('BREVO_SMTP_USER', 'a6f07c001@smtp-brevo.com')
-    smtp_password = os.getenv('BREVO_SMTP_PASSWORD')
-    sender        = os.getenv('SENDER_EMAIL', 'daniel.batista@vendamais.com.br').strip()
-    recipient     = os.getenv('RECIPIENT_EMAIL', 'daniel.batista@vendamais.com.br')
+    sender        = os.getenv('SENDER_EMAIL', 'dani.guto911@gmail.com').strip()
+    smtp_password = os.getenv('GMAIL_APP_PASSWORD')
+    recipient     = os.getenv('RECIPIENT_EMAIL', 'fabiano.silva@vendamais.com.br')
 
     html_body = f"""
 <!DOCTYPE html>
@@ -168,10 +167,10 @@ def enviar_email_avaliacao(dados: dict):
     msg['To'] = recipient
     msg.attach(MIMEText(html_body, 'html'))
 
-    with smtplib.SMTP('smtp-relay.brevo.com', 587) as server:
+    with smtplib.SMTP('smtp.gmail.com', 587) as server:
         server.ehlo()
         server.starttls()
-        server.login(smtp_user, smtp_password)
+        server.login(sender, smtp_password)
         server.sendmail(sender, recipient, msg.as_string())
 
     return True
